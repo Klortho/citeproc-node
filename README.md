@@ -194,7 +194,8 @@ The following query string parameters are recognized:
 * clearCache - If this `1`, then the server will clear any cached style engines, and
   reread the CSL styles.  This can only be sent from the localhost.  Default is `0`.
 
-The POST data JSON object can have these members:
+The POST data JSON object can have the following members (see [sampledata.json]() for
+an example).
 
 * items - either an array or a hash of items
 * itemIDs - an array of identifiers of those items to convert.  If this is not
