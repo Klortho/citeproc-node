@@ -182,12 +182,20 @@ the CSL-JSON data should be sent in the content body.
 
 The following query string parameters are recognized:
 
-* responseformat - One of `html`, `json` (others?).  Default is `json`.
-* bibliography - Default is `1`.
+* outputformat - Either `html` or `rtf`.  This specifies the format that the styled
+  citations will be rendered.  Default is `html`.
+* responseformat - Either `json`, `html`, or `rtf`.  This specifies the content type that
+  will be used in the response to the client.  If this is `json`, then the styled citations
+  (either in `html` or `rtf`) will be wrapped in a JSON object that will also include some
+  other metadata.  Otherwise, this value should match that given for `outputformat`, and
+  then the response will be either bare HTML, or bare RTF.  Default is `json`.
+
 * style - This is a URL or a name of a CSL style.  Default is `chicago-author-date`.
 * locale - Default is `en-US`
+
+
+* bibliography - Default is `1`.
 * citations - Default is `0`.
-* outputformat - Default is `html`.
 * memoryUsage - If this is `1`, the server will respond with a report of memory
   usage (and nothing else).  Default is `0`.
 * linkwrap - Default is `0`
